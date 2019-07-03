@@ -36,10 +36,9 @@ export class CustomerComponent implements OnInit {
     console.log(index);
   }
   onPurchase() {
-    console.log(this.selectedProduct);
     this.purchases.push(this.selectedProduct);
-    // this.apiService.purchase(this.customer, this.selectedProduct).subscribe(data => {
-    //   // this.purchases = data;
-    // });
+    this.apiService.purchase(this.customer, this.selectedProduct).subscribe(data => {
+       this.purchases = data;
+    });
   }
 }
