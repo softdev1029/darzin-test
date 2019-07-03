@@ -1,13 +1,13 @@
 <div style="text-align:center">
-    <h1>
-      Product List
-    </h1>
-  
-    <span *ngFor="let record of products">
-      {{record.description}} - {{record.price}}
-      <br />
-    </span>
-  
-    <button (click)="onAdd($event)" type="button">Add</button>
-  </div>
+  <h1>
+    Product List
+  </h1>
+
+  <span *ngFor="let record of products">
+    {{record.description}} - {{record.price}}
+    <br />
+  </span>
+
+  <button (click)="onAdd($event)" type="button">Add</button>
+</div>
   

@@ -1,0 +1,12 @@
+<div style="text-align:center">
+  <h1>
+    Customer List
+  </h1>
+
+  <span *ngFor="let record of customers" (click)="onClick(record)">
+    {{record.name}} - {{record.description}}
+    <br />
+  </span>
+
+  <button (click)="onAdd($event)" type="button">Add</button>
+</div>

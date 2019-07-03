@@ -15,7 +15,7 @@ export class ProductsComponent implements OnInit  {
   }
 
   ngOnInit() {
-    this.apiService.getAll().subscribe(data => {
+    this.apiService.getProducts().subscribe(data => {
       this.products = data;
     });
   }
@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit  {
       description: "New",
       price: 10
     }
-    this.apiService.add(product).subscribe(product => {
+    this.apiService.addProduct(product).subscribe(product => {
       this.products.push(product);
     }
     )

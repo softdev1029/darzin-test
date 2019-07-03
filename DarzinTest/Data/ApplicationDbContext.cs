@@ -12,5 +12,6 @@ namespace DarzinTest.Data
         public static ApplicationDbContext Create() => new ApplicationDbContext();
 
 	    public DbSet<ProductModel> Products { get; set; }
+        public DbSet<CustomerModel> Customers { get; set; }
     }
 }

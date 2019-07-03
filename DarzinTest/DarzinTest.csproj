@@ -206,6 +206,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\CustomersViewController.cs" />
     <Compile Include="Controllers\ProductsViewController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -217,7 +219,12 @@
     <Compile Include="Migrations\201907030305484_Initial.Designer.cs">
       <DependentUpon>201907030305484_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907030408318_Initial1.cs" />
+    <Compile Include="Migrations\201907030408318_Initial1.Designer.cs">
+      <DependentUpon>201907030408318_Initial1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -262,6 +269,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ProductsView\Index.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\CustomersView\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -287,6 +295,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201907030305484_Initial.resx">
       <DependentUpon>201907030305484_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907030408318_Initial1.resx">
+      <DependentUpon>201907030408318_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

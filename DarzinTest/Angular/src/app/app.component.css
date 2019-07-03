@@ -1,0 +1,26 @@
+/* AppComponent's private CSS styles */
+h1 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.row {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+}
+
+.col {
+  border: 1px solid gray;
+  width: 350px;
+}
+
+.product {
+
+}
+
+.customer {
+
+}
