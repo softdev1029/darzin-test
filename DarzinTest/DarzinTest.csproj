@@ -206,16 +206,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AngularDataController.cs" />
+    <Compile Include="Controllers\ProductsViewController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907021734506_Initial.cs" />
-    <Compile Include="Migrations\201907021734506_Initial.Designer.cs">
-      <DependentUpon>201907021734506_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201907030305484_Initial.cs" />
+    <Compile Include="Migrations\201907030305484_Initial.Designer.cs">
+      <DependentUpon>201907030305484_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ProductModel.cs" />
@@ -260,7 +260,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\AngularData\Index.cshtml" />
+    <Content Include="Views\ProductsView\Index.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -285,8 +285,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907021734506_Initial.resx">
-      <DependentUpon>201907021734506_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907030305484_Initial.resx">
+      <DependentUpon>201907030305484_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

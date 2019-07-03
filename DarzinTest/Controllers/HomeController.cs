@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace OktaAspNetMvcAngular.Controllers
+namespace DarzinTest.Controllers
 {
     public class HomeController : Controller
     {

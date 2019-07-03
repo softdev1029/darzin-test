@@ -9,7 +9,5 @@ namespace DarzinTest.Models
         public float Price { get; set; }
 
         public string Description { get; set; }
-
-        public DateTime CreatedAt { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace DarzinTest.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201907021734506_Initial"; }
+            get { return "201907030305484_Initial"; }
         }
         
         string IMigrationMetadata.Source

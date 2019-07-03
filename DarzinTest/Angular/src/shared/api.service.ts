@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import Product from './ProductModel';
@@ -13,5 +13,9 @@ export default class ApiService {
 
   getAll(): Observable<Array<Product>> {
     return this.http.get<Array<Product>>(this.PRODUCTS_ENDPOINT);
+  }
+
+  add(product: Product): Observable<any> {
+    return this.http.post<Product>(this.PRODUCTS_ENDPOINT, product);
   }
 }

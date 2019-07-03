@@ -18,10 +18,10 @@ namespace DarzinTest.Migrations
         protected override void Seed(DarzinTest.Data.ApplicationDbContext context)
         {
             context.Products.AddOrUpdate(x => x.Id,
-                new ProductModel { Id = 1, Description = "Bag", Price = 5.5f, CreatedAt = new DateTime(2018, 5, 1) },
-                new ProductModel { Id = 2, Description = "Watch", Price = 6.15f, CreatedAt = new DateTime(2018, 4, 4) },
-                new ProductModel { Id = 3, Description = "Car", Price = 20, CreatedAt = new DateTime(2018, 5, 13) },
-                new ProductModel { Id = 4, Description = "House", Price = 3.5f, CreatedAt = new DateTime(2018, 6, 6) }
+                new ProductModel { Id = 1, Description = "Bag", Price = 5.5f },
+                new ProductModel { Id = 2, Description = "Watch", Price = 6.15f },
+                new ProductModel { Id = 3, Description = "Car", Price = 20 },
+                new ProductModel { Id = 4, Description = "House", Price = 3.5f }
             );
 
             //  This method will be called after migrating to the latest version.
