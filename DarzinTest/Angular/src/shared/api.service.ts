@@ -10,6 +10,7 @@ export default class ApiService {
   public API = 'http://localhost:8089/api';
   public PRODUCTS_ENDPOINT = `${this.API}/products`;
   public CUSTOMERS_ENDPOINT = `${this.API}/customers`;
+  public PURCHASE_ENDPOINT = `${this.API}/purchase`;
 
   constructor(private http: HttpClient) { }
 
@@ -29,5 +30,10 @@ export default class ApiService {
 
   addCustomer(customer: Customer): Observable<any> {
     return this.http.post<Customer>(this.CUSTOMERS_ENDPOINT, customer);
+  }
+
+  // purchase
+  purchase(customer: Customer, product: Product): Observable<any> {
+    return this.http.post<Product>(this.PURCHASE_ENDPOINT, {customer, product});
   }
 }

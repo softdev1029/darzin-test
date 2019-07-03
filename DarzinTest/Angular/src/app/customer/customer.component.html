@@ -3,4 +3,12 @@
   <p>
     {{customer.name}}
   </p>
+  <span>Please select a product to purchase</span>
+  <select #familyRelation (change)="onChange($event.value, element, i, 'hh')" id="family_relation" placeholder="Family Relation">
+    <option *ngFor="let familyRelation of products; let i=index" [value]="i">
+        {{familyRelation.description}}
+    </option>
+  </select>
+  <button (click)="onPurchase($event)" type="button">Purchase</button>
+  <!-- <span *ngFor="let record of purchases">{{record.description}}</span> -->
 </div>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DarzinTest.Models
 {
@@ -9,5 +10,7 @@ namespace DarzinTest.Models
         public string Name { get; set; }
 
         public string Description { get; set; }
+
+        //public virtual ICollection<PurchaseModel> PurchasedProducts { get; set; }
     }
 }

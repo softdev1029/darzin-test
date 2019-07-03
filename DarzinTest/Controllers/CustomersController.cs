@@ -66,6 +66,24 @@ namespace DarzinTest.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
+        // GET: api/customers/5/products
+        IQueryable<PurchaseModel> GetPurchases(int id)
+        {
+            return db.Purchases.Where(p => p.CustomerId == id);
+        }
+
+        // POST: api/customers/5/products
+        [ResponseType(typeof(PurchaseModel))]
+        public async Task<IHttpActionResult> Purchase(int id, int pid)
+        {
+            var purchase = new PurchaseModel();
+            
+            db.Purchases.Add(purchase);
+            await db.SaveChangesAsync();
+
+            return CreatedAtRoute("DefaultApi", new { id = purchase.Id }, purchase);
+        }
+
         // POST: api/customers
         [ResponseType(typeof(CustomerModel))]
         public async Task<IHttpActionResult> PostCustomer(CustomerModel customer)

@@ -206,6 +206,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\PurchasesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\CustomersViewController.cs" />
     <Compile Include="Controllers\ProductsViewController.cs" />
@@ -215,15 +216,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907030305484_Initial.cs" />
-    <Compile Include="Migrations\201907030305484_Initial.Designer.cs">
-      <DependentUpon>201907030305484_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201907030408318_Initial1.cs" />
-    <Compile Include="Migrations\201907030408318_Initial1.Designer.cs">
-      <DependentUpon>201907030408318_Initial1.cs</DependentUpon>
+    <Compile Include="Migrations\201907030841541_Initial.cs" />
+    <Compile Include="Migrations\201907030841541_Initial.Designer.cs">
+      <DependentUpon>201907030841541_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\PurchaseModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -293,11 +291,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907030305484_Initial.resx">
-      <DependentUpon>201907030305484_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907030408318_Initial1.resx">
-      <DependentUpon>201907030408318_Initial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907030841541_Initial.resx">
+      <DependentUpon>201907030841541_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
