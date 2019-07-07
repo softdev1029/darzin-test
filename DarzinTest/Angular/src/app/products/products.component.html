@@ -3,10 +3,12 @@
     Product List
   </h1>
 
-  <span *ngFor="let record of products">
-    {{record.description}} - {{record.price}}
-    <br />
-  </span>
+  <div class="products">
+    <div *ngFor="let record of products" class="product">
+      {{record.description}} - {{record.price}}
+      <br />
+    </div>
+  </div>
 
   <button (click)="onAdd($event)" type="button">Add</button>
 </div>

@@ -23,7 +23,7 @@ export class ProductsComponent implements OnInit  {
   onAdd(event: Event) {
     var product: Product = {
       id: 10,
-      description: "New",
+      description: "New " + new Date().valueOf().toString(),
       price: 10
     }
     this.apiService.addProduct(product).subscribe(product => {
