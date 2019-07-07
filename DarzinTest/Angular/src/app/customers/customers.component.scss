@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+}
+
+.col {
+  border: 1px solid gray;
+  width: 350px;
+}

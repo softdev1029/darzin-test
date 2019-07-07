@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { provideRoutes} from '@angular/router';
 
 import ApiService from '../shared/api.service';
 import { AppRoutingModule }     from './app-routing.module';
@@ -13,13 +14,13 @@ import CommonService from 'src/shared/common.service';
 
 @NgModule({
   declarations: [
-    // AppRoutingModule,
     AppComponent,
     ProductsComponent,
     CustomersComponent,
     CustomerComponent
   ],
   imports: [
+    AppRoutingModule,
     HttpClientModule,
     BrowserModule,
     FormsModule,

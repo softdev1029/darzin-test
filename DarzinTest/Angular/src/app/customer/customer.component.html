@@ -4,7 +4,8 @@
     <p>
       {{ customer.name }}
     </p>
-    <span>Please select a product to purchase</span>
+    <div>Please select a product to purchase</div>
+    <br>
     <select [(ngModel)]="selectedProduct" id="products">
       <option *ngFor="let p of products; let i = index" value="{{i}}">
         {{p.description}}
@@ -12,6 +13,6 @@
     </select>
 
     <button (click)="onPurchase($event)" type="button">Purchase</button>
-    <span *ngFor="let record of purchases">{{record.description}}</span>
+    <div *ngFor="let record of purchases">{{record.description}}</div>
   </div>
 </div>
