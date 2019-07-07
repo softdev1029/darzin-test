@@ -14,6 +14,7 @@ namespace DarzinTest
 	        jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 	        config.Formatters.Remove(config.Formatters.XmlFormatter);
 	        jsonFormatter.SerializerSettings.DateTimeZoneHandling = Newtonsoft.Json.DateTimeZoneHandling.Utc;
+            jsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
             config.MapHttpAttributeRoutes();
 

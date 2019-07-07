@@ -1,6 +1,6 @@
 ﻿using DarzinTest.Data;
 using DarzinTest.Models;
-
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -16,16 +16,24 @@ namespace DarzinTest.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/purchases/5
-        IQueryable<PurchaseModel> GetPurchases(int id)
+        public List<ProductModel> Get(int id)
         {
-            return db.Purchases.Where(p => p.CustomerId == id);
+            List<ProductModel> pList = new List<ProductModel>();
+            var c = db.Customers.Find(id);
+            foreach (PurchaseModel p in c.Purchases)
+            {
+                pList.Add(db.Products.Find(p.ProductId));
+            }
+            return pList;
         }
 
         // POST: api/purchases/5
         [ResponseType(typeof(PurchaseModel))]
-        public async Task<IHttpActionResult> Purchase(int id, int pid)
+        public async Task<IHttpActionResult> PostPurchase(int id, ProductModel product)
         {
             var purchase = new PurchaseModel();
+            purchase.CustomerId = id;
+            purchase.ProductId = product.Id;
             
             db.Purchases.Add(purchase);
             await db.SaveChangesAsync();

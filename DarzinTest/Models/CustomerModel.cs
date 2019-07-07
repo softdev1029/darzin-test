@@ -11,6 +11,6 @@ namespace DarzinTest.Models
 
         public string Description { get; set; }
 
-        //public virtual ICollection<PurchaseModel> PurchasedProducts { get; set; }
+        public virtual ICollection<PurchaseModel> Purchases { get; set; }
     }
 }

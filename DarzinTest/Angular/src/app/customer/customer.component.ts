@@ -22,6 +22,9 @@ export class CustomerComponent implements OnInit {
   ) {
     this.commonService.getCustomer().subscribe((customer) => {
       this.customer = customer
+      this.apiService.getPurchases(this.customer).subscribe(data => {
+        this.purchases = data;
+      });
     });
 
   }
@@ -36,10 +39,9 @@ export class CustomerComponent implements OnInit {
     console.log(index);
   }
   onPurchase() {
-    this.purchases.push(this.products[this.selectedProduct]);
-    console.log(this.selectedProduct)
-    // this.apiService.purchase(this.customer, this.selectedProduct).subscribe(data => {
-    //    this.purchases = data;
-    // });
+    this.apiService.purchase(this.customer, this.products[this.selectedProduct]).subscribe(data => {
+      //  this.purchases = data;
+      this.purchases.push(this.products[this.selectedProduct]);
+    });
   }
 }
