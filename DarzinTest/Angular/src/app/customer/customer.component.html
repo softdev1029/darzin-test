@@ -1,14 +1,17 @@
 <div style="text-align:center">
   <h1>Customer Detail</h1>
-  <p>
-    {{customer.name}}
-  </p>
-  <span>Please select a product to purchase</span>
-  <select #familyRelation (change)="onChange($event.value, element, i, 'hh')" id="family_relation" placeholder="Family Relation">
-    <option *ngFor="let familyRelation of products; let i=index" [value]="i">
-        {{familyRelation.description}}
-    </option>
-  </select>
-  <button (click)="onPurchase($event)" type="button">Purchase</button>
-  <!-- <span *ngFor="let record of purchases">{{record.description}}</span> -->
+  <div *ngIf="customer">
+    <p>
+      {{ customer.name }}
+    </p>
+    <span>Please select a product to purchase</span>
+    <select [(ngModel)]="selectedProduct" id="products">
+      <option *ngFor="let p of products; let i = index" value="{{i}}">
+        {{p.description}}
+      </option>
+    </select>
+
+    <button (click)="onPurchase($event)" type="button">Purchase</button>
+    <span *ngFor="let record of purchases">{{record.description}}</span>
+  </div>
 </div>

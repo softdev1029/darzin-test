@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import ApiService from '../shared/api.service';
 import { AppRoutingModule }     from './app-routing.module';
@@ -21,6 +22,7 @@ import CommonService from 'src/shared/common.service';
   imports: [
     HttpClientModule,
     BrowserModule,
+    FormsModule,
   ],
   providers: [ApiService, CommonService],
   bootstrap: [AppComponent]

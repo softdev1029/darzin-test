@@ -14,7 +14,7 @@ export class CustomerComponent implements OnInit {
   private customer: CustomerModel;
   private products: Array<ProductModel>;
   private purchases: Array<ProductModel> = new Array<ProductModel>();
-  private selectedProduct: ProductModel;
+  private selectedProduct: number;
 
   constructor(
     private apiService: ApiService,
@@ -36,9 +36,10 @@ export class CustomerComponent implements OnInit {
     console.log(index);
   }
   onPurchase() {
-    this.purchases.push(this.selectedProduct);
-    this.apiService.purchase(this.customer, this.selectedProduct).subscribe(data => {
-       this.purchases = data;
-    });
+    this.purchases.push(this.products[this.selectedProduct]);
+    console.log(this.selectedProduct)
+    // this.apiService.purchase(this.customer, this.selectedProduct).subscribe(data => {
+    //    this.purchases = data;
+    // });
   }
 }
